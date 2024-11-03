@@ -22,7 +22,5 @@ return {
 		require("neo-tree").setup({
 			close_if_last_window = false,
 		})
-		local events = require("neo-tree.events")
-		events.fire_event(events.GIT_EVENT)
 	end,
 }
