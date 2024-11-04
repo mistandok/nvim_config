@@ -79,7 +79,17 @@ return {
 			require("neotest").setup({
 				adapters = {
 					require("neotest-golang"), -- Registration
-					require("neotest-python"),
+					require("neotest-python")({
+						is_test_file = function(file_path)
+							local Path = require("plenary.path")
+							if not vim.endswith(file_path, ".py") then
+								return false
+							end
+							local elems = vim.split(file_path, Path.path.sep)
+							local file_name = elems[#elems]
+							return vim.startswith(file_name, "test") or vim.endswith(file_name, "test.py")
+						end,
+					}),
 				},
 			})
 		end,
