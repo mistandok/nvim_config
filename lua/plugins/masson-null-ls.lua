@@ -9,12 +9,10 @@ return {
 		config = function()
 			require("mason-null-ls").setup({
 				ensure_installed = {
-					"pyright",
 					"black",
 					"golangci-lint",
 					"isort",
 					"lua-language-server",
-					"pyright",
 					"ruff",
 					"stylua",
 				},
