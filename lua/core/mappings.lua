@@ -15,6 +15,10 @@ vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
+-- Change width split screen
+vim.keymap.set("n", "<c->>", ":wincmd ><CR>")
+vim.keymap.set("n", "<c-<>", ":wincmd <<CR>")
+
 -- Splits
 vim.keymap.set("n", "|", ":vsplit<CR>")
 vim.keymap.set("n", "\\", ":split<CR>")
