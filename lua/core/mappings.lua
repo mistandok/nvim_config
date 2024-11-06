@@ -31,3 +31,13 @@ vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>")
 vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>")
 vim.keymap.set("n", "<leader>x", ":BufferLinePickClose<CR>")
 vim.keymap.set("n", "<c-x>", ":BufferLineCloseOthers<CR>")
+
+-- Execute code in cur buffer
+vim.keymap.set("n", "<F8>", function()
+	file_path = vim.api.nvim_buf_get_name(0)
+	if vim.endswith(file_path, ".py") then
+		require("toggleterm").exec("python " .. file_path)
+	elseif vim.endswith(file_path, ".go") then
+		require("toggleterm").exec("go run " .. file_path)
+	end
+end)
