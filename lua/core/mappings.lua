@@ -36,8 +36,10 @@ vim.keymap.set("n", "<c-x>", ":BufferLineCloseOthers<CR>")
 vim.keymap.set("n", "<F8>", function()
 	file_path = vim.api.nvim_buf_get_name(0)
 	if vim.endswith(file_path, ".py") then
+		vim.cmd("w")
 		require("toggleterm").exec("python " .. file_path)
 	elseif vim.endswith(file_path, ".go") then
+		vim.cmd("w")
 		require("toggleterm").exec("go run " .. file_path)
 	end
 end)
