@@ -24,9 +24,15 @@ vim.opt.fillchars = {
 	vert = "│",
 	fold = "⠀",
 	eob = " ", -- suppress ~ at EndOfBuffer
--- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+	-- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
 	msgsep = "‾",
 	foldopen = "▾",
 	foldsep = "│",
-	foldclose = "▸"
+	foldclose = "▸",
 }
+
+if vim.g.neovide then
+	vim.g.neovide_window_blurred = true
+	vim.g.neovide_transparency = 0.2
+	vim.g.neovide_show_border = true
+end
