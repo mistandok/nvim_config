@@ -5,7 +5,19 @@ return {
 			vim.filetype.add({ extension = { brief = "brief" } })
 
 			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "go", "lua", "typescript", "javascript", "python", "json", "brief" },
+				ensure_installed = {
+					"go",
+					"lua",
+					"typescript",
+					"javascript",
+					"python",
+					"json",
+					"brief",
+					"sql",
+					"csv",
+					"yaml",
+					"xml",
+				},
 				auto_install = true,
 				highlight = {
 					enable = true,

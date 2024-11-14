@@ -11,11 +11,12 @@ return {
 				red = "#ff5189",
 				violet = "#d183e8",
 				grey = "#303030",
+				dark_violet = "#4c4988",
 			}
 
 			local bubbles_theme = {
 				normal = {
-					a = { fg = colors.black, bg = colors.violet },
+					a = { fg = colors.black, bg = colors.dark_violet },
 					b = { fg = colors.white, bg = colors.grey },
 					c = { fg = colors.white },
 				},
