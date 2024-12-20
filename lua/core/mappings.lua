@@ -32,6 +32,9 @@ vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>")
 vim.keymap.set("n", "<leader>x", ":BufferLinePickClose<CR>")
 vim.keymap.set("n", "<c-x>", ":BufferLineCloseOthers<CR>")
 
+-- Show diagnostic
+vim.keymap.set("n", "zd", vim.diagnostic.open_float)
+
 -- Execute code in cur buffer
 vim.keymap.set("n", "<F8>", function()
 	file_path = vim.api.nvim_buf_get_name(0)

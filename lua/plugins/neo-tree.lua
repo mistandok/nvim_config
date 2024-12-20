@@ -28,6 +28,13 @@ return {
 		})
 		require("neo-tree").setup({
 			close_if_last_window = false,
+			buffers = {
+				leave_dirs_open = true,
+				follow_current_file = {
+					enabled = true,
+					leave_dirs_open = true,
+				},
+			},
 			sources = { "filesystem", "buffers", "git_status" },
 		})
 		vim.api.nvim_create_autocmd("TermClose", {
